@@ -1,3 +1,5 @@
+# python ./scripts/anonymize.py -i ./input -o ./anonymized
+
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
@@ -11,15 +13,13 @@ anonymize_attributes = [
     #"nam",
     #"text",
     #"type",
-    #"name",
+    "name",
     #"value",
 ]
 
 empty_attributes = [
     "host",
     "user",
-    "properties",
-    "interface",
 ]
 
 empty_tags = [
@@ -30,6 +30,7 @@ empty_tags = [
     "results",
     "prologs_epilogs",
     "usercode",
+    "coverage",
 ]
 
 def anonymize_text(text: str) -> str:
