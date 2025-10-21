@@ -84,6 +84,7 @@ class testsuites:
         return element
 
 """
+Mapping of junit data to tessy data:
 
 testsuites name
 "tessy tests"
@@ -124,6 +125,7 @@ testcase name
 testcase time="0.001"
 --
 """
+
 def tessy2junit_testcase(tessy_elements) -> testcase:
     if tessy_elements.tag != "testcase":
         return None
@@ -144,6 +146,7 @@ def tessy2junit_testsuite(tessy_element, junit_element: testsuites) -> testsuite
         if summary is not None:
             info = summary.find("info")
             if info is None:
+                #todo handle missing info
                 print("missing info in summary")
                 return junit_element
             project_name = info.attrib.get("project_name", "unknown_project")
@@ -202,16 +205,19 @@ def tessy2junit(text: str) -> str:
     # create junit root
     junit_root = testsuites(name="tessy tests")
 
+    # transform tessy to junit like classes
     junit_root = tessy2junit_testsuite(tessy_root, junit_root)
 
+    # transform junit classes to junit xml structure
     junit_root_xml = junit_root.to_element()
 
-    # xml structure to string
+    # junit xml structure to string
     return ET.tostring(junit_root_xml, encoding="utf-8").decode("utf-8")
 
 def parse_folder(input_folder: Path, output_folder: Path) -> None:
     """
-    P
+    Reads in all .xml files in the input_folder,
+    Transform there conten from tessy xml to junit xml and saves them to the output_folder.
 
     :param input_folder: Path to the folder containing files to be anonymized.
     :param output_folder: Path to the folder where anonymized files will be saved.
@@ -222,6 +228,8 @@ def parse_folder(input_folder: Path, output_folder: Path) -> None:
 
     for file_path in input_folder.glob("*.xml"):
         print(f"Parsing file: {file_path.absolute()}")
+
+        # Here you can enable exception handling if needed
         #try:
         if True:
             with file_path.absolute().open("r", ) as f_in:
@@ -231,14 +239,14 @@ def parse_folder(input_folder: Path, output_folder: Path) -> None:
 
             output_file_path = output_folder / file_path.name
             output_file_path.write_text(junit_xml_str)
-            print(f"Anonymized file saved to: {output_file_path}")
+            print(f"Transformerd file saved to: {output_file_path}")
         #except Exception as e:
         #    print(f"Error processing file '{file_path}': {e}")
 
 def main():
       import argparse
 
-      parser = argparse.ArgumentParser(description=".")
+      parser = argparse.ArgumentParser(description="Transform Tessy xml files to junit xml files.")
       parser.add_argument("-i", "--input_folder", help="Path to the input folder containing XML files.", required=True, type=Path)
       parser.add_argument("-o", "--output_folder", help="Path to the output folder for anonymized XML files.", required=True, type=Path)
 
