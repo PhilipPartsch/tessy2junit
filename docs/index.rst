@@ -9,7 +9,7 @@
    :caption: Contents
    :maxdepth: 1
 
-   author
+   tests
 
 
 Indices and tables
