@@ -97,6 +97,7 @@ tr_json_mapping = {
          "skips":       (["skips"], "unknown"),
          "passed":      (["passed"], "unknown"),
          "time":        (["time"], "unknown"),
+         "id":          (["id"], None),
          "testcases":   (["testcase"], "unknown"),
       },
       "testcase": {
