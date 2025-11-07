@@ -97,7 +97,7 @@ tr_json_mapping = {
          "skips":       (["skips"], "unknown"),
          "passed":      (["passed"], "unknown"),
          "time":        (["time"], "unknown"),
-         "id":          (["id"], None),
+         "id":          (["name"], None),
          "testcases":   (["testcase"], "unknown"),
       },
       "testcase": {
@@ -111,7 +111,7 @@ tr_json_mapping = {
          "text":        (["text"], "unknown"),
          "message":     (["message"], "unknown"),
          "system-out":  (["system-out"], "unknown"),
-         "id":          (["id"], None),
+         "id":          (["name"], None),
          "my-option":   (["my_opt"], "default"),
       }
    }
