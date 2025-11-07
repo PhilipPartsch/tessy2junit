@@ -13,5 +13,5 @@ Test report
    :auto_cases:
 
 
-We currently render the :download:`file itself <_static/_external_data/TESSY_DetailsReport.xml>`.
+We currently render the :download:`file <_static/_external_data/TESSY_DetailsReport.xml>`.
 
