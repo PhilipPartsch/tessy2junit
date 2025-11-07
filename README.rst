@@ -4,9 +4,9 @@ tessy2junit
 
 Implements a script to convert TESSY XML reports into JUnit XML format.
 
-You can find the script under `scripts/tessy2junit.py <https://github.com/PhilipPartsch/tessy2junit/blob/main/scripts/tessy2junit.py>`.
+You can find the script under `scripts/tessy2junit.py <https://github.com/PhilipPartsch/tessy2junit/blob/main/scripts/tessy2junit.py>`__.
 
-A script to anonymize Tessy reports is availalbe under `scripts/anonymize.py <https://github.com/PhilipPartsch/tessy2junit/blob/main/scripts/anonymize.py>`.
+A script to anonymize Tessy reports is availalbe under `scripts/anonymize.py <https://github.com/PhilipPartsch/tessy2junit/blob/main/scripts/anonymize.py>`__.
 
 
 
