@@ -86,3 +86,32 @@ plantuml_output_format = 'svg'
 needs_role_need_max_title_length = -1
 
 needs_build_json = True
+
+tr_json_mapping = {
+   "json_config_1": {
+      "testsuite": {
+         "name":        (["name"], "unknown"),
+         "tests":       (["tests"], "unknown"),
+         "errors":      (["errors"], "unknown"),
+         "failures":    (["failures"], "unknown"),
+         "skips":       (["skips"], "unknown"),
+         "passed":      (["passed"], "unknown"),
+         "time":        (["time"], "unknown"),
+         "testcases":   (["testcase"], "unknown"),
+      },
+      "testcase": {
+         "name":        (["name"], "unknown"),
+         "classname":   (["classname"], "unknown"),
+         "file":        (["file"], "unknown"),
+         "line":        (["line"], "unknown"),
+         "time":        (["time"], "unknown"),
+         "result":      (["result"], "unknown"),
+         "type":        (["type"], "unknown"),
+         "text":        (["text"], "unknown"),
+         "message":     (["message"], "unknown"),
+         "system-out":  (["system-out"], "unknown"),
+         "id":          (["id"], None),
+         "my-option":   (["my_opt"], "default"),
+      }
+   }
+}
