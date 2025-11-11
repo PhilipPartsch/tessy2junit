@@ -21,4 +21,6 @@ Let's link to the imported need elements
 
 .. spec:: Example Specification
    :id: S_EX_SPEC
-   :links: TEST_RES_Example
+   :links: TEST_RES_Example,
+           TEST_RES_Example_515
+           TEST_RES_Example_515_A2755
