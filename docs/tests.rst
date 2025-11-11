@@ -15,3 +15,10 @@ Test report
 
 We currently render the :download:`file <_static/_external_data/TESSY_DetailsReport.xml>`.
 
+
+Let's link to the imported need elements
+****************************************
+
+.. spec:: Example Specification
+   :id: S_EX_SPEC
+   :link: TEST_RES_Example
